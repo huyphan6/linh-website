@@ -16,7 +16,7 @@ const PageLayout = ({ children }) => {
             minHeight="100vh"
             gap={4}
             p={2}
-            sx={{ bgcolor: "#CAE9FF", m: -1 }}
+            sx={{ bgcolor: "#dcdcdd", m: -1 }}
         >
             <Navbar />
 
@@ -27,7 +27,6 @@ const PageLayout = ({ children }) => {
                     justifyContent="center"
                     p={2}
                 >
-                    <h1>Page Layout</h1>
                     {children}
                 </Stack>
             </Box>
