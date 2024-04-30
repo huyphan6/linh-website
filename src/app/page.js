@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import PageLayout from "./(components)/pageLayout";
 
@@ -15,30 +17,31 @@ const Home = () => {
     return (
         <>
             <PageLayout>
-                <Stack spacing={4} direction="column">
-                    {/* <Box display="flex" width="95vw" justifyContent="center" border="2px gray dashed">
-                        <Card>
-                            <CardContent>
-                                
-                            </CardContent>
-                        </Card>
-                    </Box> */}
-
-                    <Typography variant="h2">
+                <Stack
+                    spacing={4}
+                    direction="column"
+                    sx={{
+                        width: "100%",
+                        maxWidth: "600px", // Adjust this width as needed for mobile
+                        "@media (min-width: 600px)": {
+                            width: "100%", // Adjust this width as needed for larger screens
+                            maxWidth: "2000px", // Adjust this width as needed for larger screens
+                        },
+                    }}
+                >
+                    <Typography variant="h2" textAlign="center">
                         Family owned in Allston since 2010
                     </Typography>
 
                     <Box
                         display="flex"
-                        border="1px gray dashed"
                         justifyContent="center"
-                        padding={2}
-                        margin={2}
+                        sx={{ padding: 2, margin: 2 }}
                     >
                         <Stack
                             direction="column"
                             alignItems="center"
-                            spacing={4}
+                            spacing={5}
                         >
                             <Typography variant="h5">
                                 {" "}
@@ -49,8 +52,8 @@ const Home = () => {
                                 spacing={2}
                                 direction={{
                                     xs: "column-reverse",
-                                    sm: "column-reverse",
-                                    md: "column-reverse",
+                                    sm: "row",
+                                    md: "row",
                                     lg: "row",
                                     xl: "row",
                                 }}
@@ -58,17 +61,16 @@ const Home = () => {
                                 <Box>
                                     <Typography>Reason 1</Typography>
                                 </Box>
-                                <image>
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                </image>
+
+                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
                             </Stack>
 
                             <Stack
                                 spacing={2}
                                 direction={{
                                     xs: "column-reverse",
-                                    sm: "column-reverse",
-                                    md: "column-reverse",
+                                    sm: "row-reverse",
+                                    md: "row-reverse",
                                     lg: "row-reverse",
                                     xl: "row-reverse",
                                 }}
@@ -76,17 +78,16 @@ const Home = () => {
                                 <Box>
                                     <Typography>Reason 2</Typography>
                                 </Box>
-                                <image>
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                </image>
+
+                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
                             </Stack>
 
                             <Stack
                                 spacing={2}
                                 direction={{
                                     xs: "column-reverse",
-                                    sm: "column-reverse",
-                                    md: "column-reverse",
+                                    sm: "row",
+                                    md: "row",
                                     lg: "row",
                                     xl: "row",
                                 }}
@@ -94,16 +95,14 @@ const Home = () => {
                                 <Box>
                                     <Typography>Reason 3</Typography>
                                 </Box>
-                                <image>
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                </image>
+
+                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
                             </Stack>
                         </Stack>
                     </Box>
 
                     <Box
                         display="flex"
-                        border="1px gray dashed"
                         justifyContent="center"
                         padding={2}
                         margin={2}
@@ -112,7 +111,13 @@ const Home = () => {
                             <Typography variant="h5"> Our Services </Typography>
 
                             <Stack
-                                direction="row"
+                                direction={{
+                                    xs: "column",
+                                    sm: "row",
+                                    md: "row",
+                                    lg: "row",
+                                    xl: "row",
+                                }}
                                 margin={4}
                                 spacing={8}
                                 alignItems="center"

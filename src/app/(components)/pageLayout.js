@@ -15,7 +15,7 @@ const PageLayout = ({ children }) => {
             fontFamily: "-apple-system",
             h2: {
                 fontWeight: 500,
-            }
+            },
         },
     });
 
@@ -29,11 +29,22 @@ const PageLayout = ({ children }) => {
                 minHeight="100vh"
                 gap={4}
                 p={2}
-                sx={{ bgcolor: "#dcdcdd", m: -1 }}
+                sx={{ backgroundcolor: "#dcdcdd", m: -1 }}
             >
                 <Navbar />
 
-                <Box flexGrow={1} width sx={{ m: 4 }}>
+                <Box
+                    flexGrow={1}
+                    sx={{
+                        m: 4,
+                        width: "100%",
+                        maxWidth: "600px", // Adjust this width as needed for mobile
+                        '@media (min-width: 600px)': {
+                            width: "100%", // Adjust this width as needed for larger screens
+                            maxWidth: "2000px", // Adjust this width as needed for larger screens
+                        },
+                    }}
+                >
                     <Stack
                         direction="column"
                         alignItems="center"

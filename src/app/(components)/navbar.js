@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import {
     Box,
@@ -11,6 +11,7 @@ import {
     Stack,
     Menu,
     MenuItem,
+    Drawer,
 } from "@mui/material";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -26,12 +27,17 @@ const Navbar = () => {
     const router = useRouter();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
+    // const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
+    };
+
+    const [open, setOpen] = useState(false);
+    const toggleDrawer = (newOpen) => {
+        setOpen(newOpen);
     };
 
     const theme = createTheme({
@@ -93,14 +99,14 @@ const Navbar = () => {
                         >
                             Home
                         </Button>
-                        <Button
+                        {/* <Button
                             color="linhButton"
                             variant="contained"
                             startIcon={<InfoRoundedIcon />}
                             onClick={() => router.push("/about")}
                         >
                             About
-                        </Button>
+                        </Button> */}
                         <Button
                             color="linhButton"
                             variant="contained"
@@ -136,12 +142,13 @@ const Navbar = () => {
                     </Stack>
 
                     <IconButton
-                        aria-label="more"
-                        id="long-button"
-                        aria-controls={open ? "long-menu" : undefined}
-                        aria-expanded={open ? "true" : undefined}
-                        aria-haspopup="true"
-                        onClick={handleClick}
+                        // aria-label="more"
+                        // id="long-button"
+                        // aria-controls={open ? "long-menu" : undefined}
+                        // aria-expanded={open ? "true" : undefined}
+                        // aria-haspopup="true"
+                        // onClick={handleClick}
+                        onClick={() => toggleDrawer(true)}
                         sx={{
                             mx: 1,
                             display: {
@@ -155,76 +162,66 @@ const Navbar = () => {
                     >
                         <MenuRoundedIcon />
                     </IconButton>
-                    <Menu
-                        id="long-menu"
-                        MenuListProps={{
-                            "aria-labelledby": "long-button",
-                        }}
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                    >
-                        <MenuItem>
+
+                    <Drawer open={open} onClose={() => toggleDrawer(false)} >
+                        <Stack
+                            spacing={3}
+                            width="250px"
+                            direction="column"
+                            sx={{
+                                m: 2,
+                                p: 2,
+                                spacing: "2rem",
+                                alignContent: "center",
+                            }}
+                        >
                             <Button
                                 color="linhButton"
-                                variant="outlined"
+                                variant="contained"
+                                size="lg"
                                 startIcon={<HomeRoundedIcon />}
                                 onClick={() => router.push("/")}
                             >
                                 Home
                             </Button>
-                        </MenuItem>
-                        <MenuItem>
                             <Button
                                 color="linhButton"
-                                variant="outlined"
-                                startIcon={<InfoRoundedIcon />}
-                                onClick={() => router.push("/about")}
-                            >
-                                About
-                            </Button>
-                        </MenuItem>
-                        <MenuItem>
-                            <Button
-                                color="linhButton"
-                                variant="outlined"
+                                variant="contained"
+                                size="lg"
                                 startIcon={<MonetizationOnRoundedIcon />}
                                 onClick={() => router.push("/services")}
                             >
                                 Services
                             </Button>
-                        </MenuItem>
-                        <MenuItem>
                             <Button
                                 color="linhButton"
-                                variant="outlined"
+                                variant="contained"
+                                size="lg"
                                 startIcon={<AccountCircleRoundedIcon />}
-                                onClick={() => router.push("staff")}
+                                onClick={() => router.push("/staff")}
                             >
                                 Staff
                             </Button>
-                        </MenuItem>
-                        <MenuItem>
                             <Button
                                 color="linhButton"
-                                variant="outlined"
+                                variant="contained"
+                                size="lg"
                                 startIcon={<CallRoundedIcon />}
                                 onClick={() => router.push("/contact")}
                             >
                                 Contact
                             </Button>
-                        </MenuItem>
-                        <MenuItem>
                             <Button
                                 color="linhButton"
-                                variant="outlined"
+                                variant="contained"
+                                size="lg"
                                 startIcon={<CalendarMonthRoundedIcon />}
                                 onClick={() => router.push("/hours")}
                             >
                                 Hours
                             </Button>
-                        </MenuItem>
-                    </Menu>
+                        </Stack>
+                    </Drawer>
                 </Stack>
             </Box>
         </ThemeProvider>
