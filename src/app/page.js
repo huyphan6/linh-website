@@ -22,10 +22,10 @@ const Home = () => {
                     direction="column"
                     sx={{
                         width: "100%",
-                        maxWidth: "600px", // Adjust this width as needed for mobile
+                        maxWidth: "600px", 
                         "@media (min-width: 600px)": {
-                            width: "100%", // Adjust this width as needed for larger screens
-                            maxWidth: "2000px", // Adjust this width as needed for larger screens
+                            width: "100%",
+                            maxWidth: "2000px",
                         },
                     }}
                 >
