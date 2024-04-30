@@ -51,9 +51,10 @@ const Services = () => {
                             width: "90%",
                             maxWidth: "2000px",
                         },
-                        bgcolor: "background.paper",
                         display: "flex",
-                        border: "2px dashed",
+                        bgcolor: "background.paper",
+                        borderRadius: 1,
+                        border: "1px solid"
                     }}
                 >
                     <Tabs

@@ -6,7 +6,6 @@ import {
     Avatar,
     Typography,
     Card,
-    CardActions,
     CardContent,
     Box,
 } from "@mui/material";
@@ -72,6 +71,9 @@ const Staff = () => {
                                 <Typography variant="subtitle1">
                                     Owner
                                 </Typography>
+                                <Typography variant="subtitle2">
+                                    (617) 480-9370
+                                </Typography>
                             </CardContent>
                         </Card>
 
@@ -101,7 +103,10 @@ const Staff = () => {
                                     Nhat Trinh
                                 </Typography>
                                 <Typography variant="subtitle1">
-                                    Lead Tailor{" "}
+                                    Lead Tailor
+                                </Typography>
+                                <Typography variant="subtitle2">
+                                    (617) 448-9723
                                 </Typography>
                             </CardContent>
                         </Card>
