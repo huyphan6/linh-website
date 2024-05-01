@@ -43,26 +43,34 @@ const Staff = () => {
                             width: "90%",
                         }}
                     >
-                        <Card variant="outlined" sx={{ width: "auto" }}>
+                        <Card
+                            variant="outlined"
+                            sx={{
+                                width: "auto",
+                                borderRadius: 2,
+                                border: "4px solid",
+                            }}
+                        >
                             <CardContent sx={{ p: 5 }}>
                                 <Avatar
-                                    alt=""
-                                    src=""
+                                    alt="Hung Phan"
+                                    src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714586312/HQP_1720_mfbxla.jpg"
+                                    variant="rounded"
                                     sx={{
                                         width: {
-                                            xs: 150,
-                                            sm: 200,
-                                            md: 300,
-                                            lg: 400,
+                                            xs: 200,
+                                            sm: 300,
+                                            md: 350,
+                                            lg: 450,
                                         },
                                         height: {
-                                            xs: 150,
-                                            sm: 200,
-                                            md: 300,
-                                            lg: 400,
+                                            xs: 200,
+                                            sm: 300,
+                                            md: 350,
+                                            lg: 450,
                                         },
-                                        p: 3,
-                                        m: 3,
+                                        p: 2,
+                                        m: 2,
                                     }}
                                 />
                                 <Typography variant="h4" sx={{ pt: 4 }}>
@@ -77,26 +85,34 @@ const Staff = () => {
                             </CardContent>
                         </Card>
 
-                        <Card variant="outlined" sx={{ width: "auto" }}>
+                        <Card
+                            variant="outlined"
+                            sx={{
+                                width: "auto",
+                                borderRadius: 2,
+                                border: "4px solid",
+                            }}
+                        >
                             <CardContent sx={{ p: 5 }}>
                                 <Avatar
-                                    alt=""
-                                    src=""
+                                    alt="Nhat Trinh"
+                                    src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714586312/HQP_1775_t9r0pd.jpg"
+                                    variant="rounded"
                                     sx={{
                                         width: {
-                                            xs: 150,
-                                            sm: 200,
-                                            md: 300,
-                                            lg: 400,
+                                            xs: 200,
+                                            sm: 300,
+                                            md: 350,
+                                            lg: 450,
                                         },
                                         height: {
-                                            xs: 150,
-                                            sm: 200,
-                                            md: 300,
-                                            lg: 400,
+                                            xs: 200,
+                                            sm: 300,
+                                            md: 350,
+                                            lg: 450,
                                         },
-                                        p: 3,
-                                        m: 3,
+                                        p: 2,
+                                        m: 2,
                                     }}
                                 />
                                 <Typography variant="h4" sx={{ pt: 4 }}>

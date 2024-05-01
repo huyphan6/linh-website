@@ -25,8 +25,8 @@ const Hours = () => {
                         justifyContent="center"
                         sx={{
                             bgcolor: "background.paper",
-                            borderRadius: 1,
-                            border: "1px solid",
+                            borderRadius: 2,
+                            border: "4px solid",
                             p: 5,
                             m: 2,
                         }}

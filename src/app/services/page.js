@@ -3,7 +3,21 @@
 import React from "react";
 import PageLayout from "../(components)/pageLayout";
 
-import { Tab, Tabs, Box, Typography } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+    Tab,
+    Tabs,
+    TabList,
+    Box,
+    Typography,
+    Stack,
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+} from "@mui/material";
+
+import CheckroomRoundedIcon from "@mui/icons-material/CheckroomRounded";
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -17,8 +31,15 @@ const TabPanel = (props) => {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
+                <Box
+                    sx={{
+                        p: 1,
+                        display: "flex",
+                        justifyContent: "center",
+                        // border: "2px dashed",
+                    }}
+                >
+                    {children}
                 </Box>
             )}
         </div>
@@ -26,6 +47,13 @@ const TabPanel = (props) => {
 };
 
 const Services = () => {
+    const theme = createTheme({
+        pallete: {
+            customTab: {
+                main: "#7E5A9B",
+            }
+        }
+    });
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -33,73 +61,294 @@ const Services = () => {
     };
     return (
         <>
-            <PageLayout>
-                <h1>Services</h1>
-
-                <Box
-                    sx={{
-                        flexGrow: 1,
-                        height: "90%",
-                        maxHeight: "350px",
-                        "@media (min-Height: 350px)": {
-                            height: "90%",
-                            maxHeight: "350px",
-                        },
-                        width: "90%",
-                        maxWidth: "600px",
-                        "@media (min-width: 600px)": {
-                            width: "90%",
-                            maxWidth: "2000px",
-                        },
-                        display: "flex",
-                        bgcolor: "background.paper",
-                        borderRadius: 1,
-                        border: "1px solid"
-                    }}
-                >
-                    <Tabs
-                        orientation="vertical"
-                        variant="scrollable"
-                        value={value}
-                        onChange={handleChange}
-                        sx={{py:2, my:2, borderRight: 1, borderColor: "divider" }}
+            <ThemeProvider theme={theme}>
+                <PageLayout>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            width: "100%",
+                            maxWidth: "660px",
+                            "@media (min-width: 660px)": {
+                                width: "100%",
+                                maxWidth: "700px",
+                            },
+                            display: "flex",
+                            bgcolor: "background.paper",
+                            borderRadius: 3,
+                            border: "5px solid",
+                        }}
                     >
-                        <Tab label="tab1" />
-                        <Tab label="tab2" />
-                        <Tab label="tab3" />
-                        <Tab label="tab4" />
-                        <Tab label="tab5" />
-                        <Tab label="tab6" />
-                        <Tab label="tab7" />
-                        <Tab label="tab8" />
-                    </Tabs>
+                        <Tabs
+                            orientation="vertical"
+                            variant="scrollable"
+                            textColor="secondary"
+                            indicatorColor="secondary"
+                            value={value}
+                            onChange={handleChange}
+                            sx={{
+                                p: 1,
+                                m: 1,
+                                borderRight: 2,
+                                borderColor: "divider",
+                            }}
+                        >
+                            <Tab label="Dry Cleaning" />
+                            <Tab label="Wash & Fold" />
+                            <Tab label="Tops" />
+                            <Tab label="Bottoms" />
+                            <Tab label="Dresses" />
+                            <Tab label="Coats" />
+                            <Tab label="Suits" />
+                            <Tab label="MISC" />
+                        </Tabs>
 
-                    <TabPanel value={value} index={0}> 
-                        Item One
-                    </TabPanel>
-                    <TabPanel value={value} index={1}>
-                        Item Two
-                    </TabPanel>
-                    <TabPanel value={value} index={2}>
-                        Item Three
-                    </TabPanel>
-                    <TabPanel value={value} index={3}>
-                        Item Four
-                    </TabPanel>
-                    <TabPanel value={value} index={4}>
-                        Item Five
-                    </TabPanel>
-                    <TabPanel value={value} index={5}>
-                        Item Six
-                    </TabPanel>
-                    <TabPanel value={value} index={6}>
-                        Item Seven
-                    </TabPanel>
-                    <TabPanel value={value} index={7}>
-                        Item Eight
-                    </TabPanel>
-                </Box>
-            </PageLayout>
+                        <TabPanel value={value} index={0}>
+                            <Stack
+                                direction="column"
+                                justifyContent="center"
+                                sx={{ m: 2 }}
+                            >
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Dress shirts: $7.00" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Blouses: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Sweater: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Trousers: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Blazers: $15.00" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="$1.75/lb" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={2}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Dress Shirts: $3.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Boxed Shirts: $5.00" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Blouses: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Sweaters: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Polos: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Alterations: $15-$25" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={3}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Trousers: $7.50" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Skirts: $10" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Alterations: $15" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={4}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Dresses: $15-$20" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Wedding Dresses: $100-$150" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Alterations: $20-$80" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={5}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Coats: $30-$40" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Lab coats: $15.00" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary=" Luxury Coats: $60-$70" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Scarves: $10-$20" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Alterations: $25-$40" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={6}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="2 piece suit: $20" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Blazers: $15" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Pants: $7.25" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Vests: $10" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Ties: $5" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Alterations: $30-$100" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                        <TabPanel value={value} index={7}>
+                            <Stack direction="column" justifyContent="center">
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Comforters: $40-$60" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Boots: $60" />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText primary="Leather Jackets: $50-$100" />
+                                    </ListItem>
+                                </List>
+                            </Stack>
+                        </TabPanel>
+                    </Box>
+                </PageLayout>
+            </ThemeProvider>
         </>
     );
 };

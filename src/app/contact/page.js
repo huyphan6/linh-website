@@ -28,7 +28,15 @@ const Contact = () => {
                         },
                     }}
                 >
-                    <Card variant="outlined" sx={{ m: 1, p: 1 }}>
+                    <Card
+                        variant="none"
+                        sx={{
+                            m: 1,
+                            p: 1,
+                            borderRadius: 2,
+                            border: "4px solid",
+                        }}
+                    >
                         <CardContent sx={{ p: 5 }}>
                             <h1 fontFamily="-apple-system"> Contact us! </h1>
                             <List>

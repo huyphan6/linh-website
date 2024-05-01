@@ -99,14 +99,6 @@ const Navbar = () => {
                         >
                             Home
                         </Button>
-                        {/* <Button
-                            color="linhButton"
-                            variant="contained"
-                            startIcon={<InfoRoundedIcon />}
-                            onClick={() => router.push("/about")}
-                        >
-                            About
-                        </Button> */}
                         <Button
                             color="linhButton"
                             variant="contained"
