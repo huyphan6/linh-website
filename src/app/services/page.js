@@ -18,6 +18,7 @@ import {
 } from "@mui/material";
 
 import CheckroomRoundedIcon from "@mui/icons-material/CheckroomRounded";
+import { PiShirtFolded } from "react-icons/pi";
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -36,7 +37,6 @@ const TabPanel = (props) => {
                         p: 1,
                         display: "flex",
                         justifyContent: "center",
-                        // border: "2px dashed",
                     }}
                 >
                     {children}
@@ -51,8 +51,8 @@ const Services = () => {
         pallete: {
             customTab: {
                 main: "#7E5A9B",
-            }
-        }
+            },
+        },
     });
     const [value, setValue] = React.useState(0);
 
@@ -67,12 +67,14 @@ const Services = () => {
                         sx={{
                             flexGrow: 1,
                             width: "100%",
-                            maxWidth: "660px",
-                            "@media (min-width: 660px)": {
+                            maxWidth: "700px",
+                            "@media (min-width: 700px)": {
                                 width: "100%",
                                 maxWidth: "700px",
                             },
                             display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
                             bgcolor: "background.paper",
                             borderRadius: 3,
                             border: "5px solid",
@@ -92,14 +94,38 @@ const Services = () => {
                                 borderColor: "divider",
                             }}
                         >
-                            <Tab label="Dry Cleaning" />
-                            <Tab label="Wash & Fold" />
-                            <Tab label="Tops" />
-                            <Tab label="Bottoms" />
-                            <Tab label="Dresses" />
-                            <Tab label="Coats" />
-                            <Tab label="Suits" />
-                            <Tab label="MISC" />
+                            <Tab
+                                label="Dry Cleaning"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Wash & Fold"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Tops"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Bottoms"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Dresses"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Coats"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="Suits"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
+                            <Tab
+                                label="MISC"
+                                sx={{ textTransform: "none", fontSize: 18 }}
+                            />
                         </Tabs>
 
                         <TabPanel value={value} index={0}>
@@ -113,31 +139,56 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Dress shirts: $7.00" />
+                                        <ListItemText
+                                            primary="Dress shirts: $7.00"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Blouses: $7.50" />
+                                        <ListItemText
+                                            primary="Blouses: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Sweater: $7.50" />
+                                        <ListItemText
+                                            primary="Sweater: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Trousers: $7.50" />
+                                        <ListItemText
+                                            primary="Trousers: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Blazers: $15.00" />
+                                        <ListItemText
+                                            primary="Blazers: $15.00"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -149,7 +200,12 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="$1.75/lb" />
+                                        <ListItemText
+                                            primary="$1.75/lb"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -161,37 +217,67 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Dress Shirts: $3.50" />
+                                        <ListItemText
+                                            primary="Dress Shirts: $3.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Boxed Shirts: $5.00" />
+                                        <ListItemText
+                                            primary="Boxed Shirts: $5.00"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Blouses: $7.50" />
+                                        <ListItemText
+                                            primary="Blouses: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Sweaters: $7.50" />
+                                        <ListItemText
+                                            primary="Sweaters: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Polos: $7.50" />
+                                        <ListItemText
+                                            primary="Polos: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Alterations: $15-$25" />
+                                        <ListItemText
+                                            primary="Alterations: $15-$25"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -203,19 +289,45 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Trousers: $7.50" />
+                                        <ListItemText
+                                            primary="Trousers: $7.50"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Skirts: $10" />
+                                        <ListItemText
+                                            primary="Skirts: $10"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Alterations: $15" />
+                                        <ListItemText
+                                            primary="Long Skirts: $13"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary="Alterations: $15"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -227,19 +339,45 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Dresses: $15-$20" />
+                                        <ListItemText
+                                            primary="Short: $15"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Wedding Dresses: $100-$150" />
+                                        <ListItemText
+                                            primary="Long: $20"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Alterations: $20-$80" />
+                                        <ListItemText
+                                            primary="Wedding: $100-$150"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary="Alterations: $20-$80"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -251,31 +389,67 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Coats: $30-$40" />
+                                        <ListItemText
+                                            primary="Short: $30"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Lab coats: $15.00" />
+                                        <ListItemText
+                                            primary="Long: $40"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary=" Luxury Coats: $60-$70" />
+                                        <ListItemText
+                                            primary="Lab Coats: $15.00"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Scarves: $10-$20" />
+                                        <ListItemText
+                                            primary=" Luxury/Designer: $60-$70"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Alterations: $25-$40" />
+                                        <ListItemText
+                                            primary="Scarves: $10-$20"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>
+                                            <CheckroomRoundedIcon />
+                                        </ListItemIcon>
+                                        <ListItemText
+                                            primary="Alterations: $25-$40"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -287,37 +461,67 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="2 piece suit: $20" />
+                                        <ListItemText
+                                            primary="2 piece suit: $20"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Blazers: $15" />
+                                        <ListItemText
+                                            primary="Blazers: $15"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Pants: $7.25" />
+                                        <ListItemText
+                                            primary="Pants: $7.25"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Vests: $10" />
+                                        <ListItemText
+                                            primary="Vests: $10"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Ties: $5" />
+                                        <ListItemText
+                                            primary="Ties: $5"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Alterations: $30-$100" />
+                                        <ListItemText
+                                            primary="Alterations: $30-$100"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
@@ -329,19 +533,34 @@ const Services = () => {
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Comforters: $40-$60" />
+                                        <ListItemText
+                                            primary="Comforters: $40-$60"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Boots: $60" />
+                                        <ListItemText
+                                            primary="Boots: $60"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                     <ListItem>
                                         <ListItemIcon>
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
-                                        <ListItemText primary="Leather Jackets: $50-$100" />
+                                        <ListItemText
+                                            primary="Leather Jackets: $50-$100"
+                                            primaryTypographyProps={{
+                                                fontSize: "20px",
+                                            }}
+                                        />
                                     </ListItem>
                                 </List>
                             </Stack>
