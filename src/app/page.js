@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import PageLayout from "./(components)/pageLayout";
 
 import {
@@ -14,6 +15,8 @@ import {
 } from "@mui/material";
 
 const Home = () => {
+    const router = useRouter();
+
     return (
         <>
             <PageLayout>
@@ -22,7 +25,7 @@ const Home = () => {
                     direction="column"
                     sx={{
                         width: "100%",
-                        maxWidth: "600px", 
+                        maxWidth: "600px",
                         "@media (min-width: 600px)": {
                             width: "100%",
                             maxWidth: "2000px",
@@ -33,11 +36,7 @@ const Home = () => {
                         Family owned in Allston since 2010
                     </Typography>
 
-                    <Box
-                        display="flex"
-                        justifyContent="center"
-                        sx={{ padding: 2, margin: 2 }}
-                    >
+                    <Box display="flex" justifyContent="center" sx={{ p: 8 }}>
                         <Stack
                             direction="column"
                             alignItems="center"
@@ -50,6 +49,8 @@ const Home = () => {
 
                             <Stack
                                 spacing={2}
+                                alignItems="center"
+                                justifyContent="center"
                                 direction={{
                                     xs: "column-reverse",
                                     sm: "row",
@@ -59,14 +60,39 @@ const Home = () => {
                                 }}
                             >
                                 <Box>
-                                    <Typography>Reason 1</Typography>
+                                    <Typography
+                                        display="block"
+                                        sx={{ whiteSpace: "pre-line" }}
+                                    >
+                                        Celebrate 10+ years with us!
+                                    </Typography>
+                                    <Typography
+                                        display="block"
+                                        sx={{ whiteSpace: "pre-line" }}
+                                    >
+                                        {"\n"}
+                                    </Typography>
+                                    <Typography>
+                                        We are a small family owned local
+                                        business, proudly serving Allston,
+                                        Massachusetts for over 10 years. With
+                                        years of knowledge and experience in the
+                                        industry, we aim for the best service we
+                                        can!
+                                    </Typography>
                                 </Box>
 
-                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
+                                <Avatar
+                                    alt="Family Owned"
+                                    src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714675702/linh4_imd6lj.jpg"
+                                    sx={{ width: 216, height: 216 }}
+                                    variant="rounded"
+                                />
                             </Stack>
 
                             <Stack
                                 spacing={2}
+                                alignItems="center"
                                 direction={{
                                     xs: "column-reverse",
                                     sm: "row-reverse",
@@ -76,14 +102,38 @@ const Home = () => {
                                 }}
                             >
                                 <Box>
-                                    <Typography>Reason 2</Typography>
+                                    <Typography>
+                                        Quick Turn Around Time!
+                                    </Typography>
+                                    <Typography
+                                        display="block"
+                                        sx={{ whiteSpace: "pre-line" }}
+                                    >
+                                        {"\n"}
+                                    </Typography>
+                                    <Typography>
+                                        Everything we do is in house! Dry
+                                        cleaning, laundry services, and
+                                        tailoring! With a quick turn around for
+                                        dry cleaning and laundry, expected
+                                        earliest pick up is 48 hours after drop
+                                        off! Our goal is to provide reliable and
+                                        efficient dry cleaning services for all
+                                        your clothing needs!{" "}
+                                    </Typography>
                                 </Box>
 
-                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
+                                <Avatar
+                                    alt="Quick Turnaround"
+                                    src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714675510/linh2_muvnvg.jpg"
+                                    sx={{ width: 216, height: 216 }}
+                                    variant="rounded"
+                                />
                             </Stack>
 
                             <Stack
                                 spacing={2}
+                                alignItems="center"
                                 direction={{
                                     xs: "column-reverse",
                                     sm: "row",
@@ -93,10 +143,31 @@ const Home = () => {
                                 }}
                             >
                                 <Box>
-                                    <Typography>Reason 3</Typography>
+                                    <Typography>
+                                        Personalized Requests
+                                    </Typography>
+                                    <Typography
+                                        display="block"
+                                        sx={{ whiteSpace: "pre-line" }}
+                                    >
+                                        {"\n"}
+                                    </Typography>
+                                    <Typography>
+                                        We strive for customer excellence. From
+                                        the time you drop off to when you pick
+                                        up, we want to carry out any request to
+                                        achieve satisfaction. Quality care is
+                                        our priority and we are glad to offer
+                                        it. Let’s have a chat!{" "}
+                                    </Typography>
                                 </Box>
 
-                                <Avatar sx={{ width: 216, height: 216 }} variant="rounded"/>
+                                <Avatar
+                                    alt=""
+                                    src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714676368/linh5_dwdsqe.jpg"
+                                    sx={{ width: 216, height: 216 }}
+                                    variant="rounded"
+                                />
                             </Stack>
                         </Stack>
                     </Box>
@@ -122,29 +193,58 @@ const Home = () => {
                                 spacing={8}
                                 alignItems="center"
                             >
-                                <Stack direction="column" alignItems="center">
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                    <Typography>Service 1</Typography>
+                                <Stack direction="column" alignItems="center" spacing={2}>
+                                    <Avatar
+                                        alt="Dry Cleaning"
+                                        src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714678040/shirt-svgrepo-com_vvzlon.svg"
+                                        variant="rounded"
+                                        sx={{ width: 64, height: 64 }}
+                                    />
+                                    <Typography>Dry Cleaning</Typography>
                                 </Stack>
-                                <Stack direction="column" alignItems="center">
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                    <Typography>Service 2</Typography>
+                                <Stack direction="column" alignItems="center" spacing={2}>
+                                    <Avatar
+                                        alt="Wash & Fold"
+                                        src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714678034/laundry-service-svgrepo-com_nnvv6u.svg"
+                                        variant="rounded"
+                                        sx={{ width: 64, height: 64 }}
+                                    />
+                                    <Typography>Wash & Fold</Typography>
                                 </Stack>
-                                <Stack direction="column" alignItems="center">
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                    <Typography>Service 3</Typography>
+                                <Stack direction="column" alignItems="center" spacing={2}>
+                                    <Avatar
+                                        alt="Alterations"
+                                        src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714678033/sewing-machine-svgrepo-com_rru8a0.svg"
+                                        variant="rounded"
+                                        sx={{ width: 64, height: 64 }}
+                                    />
+                                    <Typography>Alterations</Typography>
                                 </Stack>
-                                <Stack direction="column" alignItems="center">
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                    <Typography>Service 4</Typography>
+                                <Stack direction="column" alignItems="center" spacing={2}>
+                                    <Avatar
+                                        alt="Shirt Laundry"
+                                        src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714678033/shirt-and-tie-svgrepo-com_zifiqi.svg"
+                                        variant="rounded"
+                                        sx={{ width: 64, height: 64 }}
+                                    />
+                                    <Typography>Shirt Laundry</Typography>
                                 </Stack>
-                                <Stack direction="column" alignItems="center">
-                                    <Avatar sx={{ width: 56, height: 56 }} />
-                                    <Typography>Service 5</Typography>
+                                <Stack direction="column" alignItems="center" spacing={2}>
+                                    <Avatar
+                                        alt="Wedding Gown"
+                                        src="https://res.cloudinary.com/dfquzd92w/image/upload/v1714678033/dress-4-svgrepo-com_vvvrvg.svg"
+                                        variant="rounded"
+                                        sx={{ width: 64, height: 64 }}
+                                    />
+                                    <Typography>Wedding Gown</Typography>
                                 </Stack>
                             </Stack>
 
-                            <Button variant="contained">
+                            <Button
+                                sx={{ bgcolor: "#7E5A9B" }}
+                                variant="contained"
+                                onClick={() => router.push("/services")}
+                            >
                                 View All Services
                             </Button>
                         </Stack>

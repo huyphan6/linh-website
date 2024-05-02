@@ -22,7 +22,7 @@ const Staff = () => {
                         maxWidth: "650px",
                         "@media (min-width: 650px)": {
                             width: "100%",
-                            maxWidth: "2000px",
+                            maxWidth: "1000px",
                         },
                     }}
                 >
@@ -40,7 +40,6 @@ const Staff = () => {
                         sx={{
                             p: 5,
                             m: 5,
-                            width: "90%",
                         }}
                     >
                         <Card
@@ -51,7 +50,7 @@ const Staff = () => {
                                 border: "4px solid",
                             }}
                         >
-                            <CardContent sx={{ p: 5 }}>
+                            <CardContent sx={{ p: 3 }}>
                                 <Avatar
                                     alt="Hung Phan"
                                     src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714586312/HQP_1720_mfbxla.jpg"
@@ -93,7 +92,7 @@ const Staff = () => {
                                 border: "4px solid",
                             }}
                         >
-                            <CardContent sx={{ p: 5 }}>
+                            <CardContent sx={{ p: 3 }}>
                                 <Avatar
                                     alt="Nhat Trinh"
                                     src="https://res.cloudinary.com/dfquzd92w/image/upload/f_auto/c_limit/v1714586312/HQP_1775_t9r0pd.jpg"
