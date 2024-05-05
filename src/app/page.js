@@ -7,8 +7,6 @@ import PageLayout from "./(components)/pageLayout";
 import {
     Stack,
     Box,
-    Card,
-    CardContent,
     Typography,
     Avatar,
     Button,

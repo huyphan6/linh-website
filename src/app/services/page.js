@@ -7,9 +7,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import {
     Tab,
     Tabs,
-    TabList,
     Box,
-    Typography,
     Stack,
     List,
     ListItem,
@@ -18,7 +16,6 @@ import {
 } from "@mui/material";
 
 import CheckroomRoundedIcon from "@mui/icons-material/CheckroomRounded";
-import { PiShirtFolded } from "react-icons/pi";
 
 const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
