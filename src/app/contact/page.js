@@ -15,7 +15,7 @@ import PhonelinkRingRoundedIcon from "@mui/icons-material/PhonelinkRingRounded";
 const Contact = () => {
     return (
         <>
-            <PageLayout>
+            <PageLayout pageTitle="Linh - Contact">
                 <Box
                     sx={{
                         display: "flex",

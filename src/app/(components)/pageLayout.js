@@ -9,7 +9,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-const PageLayout = ({ children }) => {
+const PageLayout = ({ children, pageTitle }) => {
     const theme = createTheme({
         typography: {
             fontFamily: "-apple-system",
@@ -31,6 +31,7 @@ const PageLayout = ({ children }) => {
                 p={2}
                 sx={{ backgroundcolor: "#dcdcdd", m: -1 }}
             >
+                <title>{pageTitle}</title>
                 <Navbar />
 
                 <Box

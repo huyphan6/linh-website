@@ -59,7 +59,7 @@ const Services = () => {
     return (
         <>
             <ThemeProvider theme={theme}>
-                <PageLayout>
+                <PageLayout pageTitle="Linh - Services">
                     <Box
                         sx={{
                             flexGrow: 1,

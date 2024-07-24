@@ -6,7 +6,7 @@ import { Box, Stack, Typography } from "@mui/material";
 const Hours = () => {
     return (
         <>
-            <PageLayout>
+            <PageLayout pageTitle="Linh - Hours">
                 <Box
                     sx={{
                         display: "flex",

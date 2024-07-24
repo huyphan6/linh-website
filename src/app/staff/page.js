@@ -13,7 +13,7 @@ import {
 const Staff = () => {
     return (
         <>
-            <PageLayout>
+            <PageLayout pageTitle="Linh - Staff">
                 <Box
                     sx={{
                         display: "flex",

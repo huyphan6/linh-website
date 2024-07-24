@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <>
-            <PageLayout>
+            <PageLayout pageTitle="Linh Dry Cleaners">
                 <Stack
                     spacing={4}
                     direction="column"
