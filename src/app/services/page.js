@@ -198,7 +198,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="$1.75/lb"
+                                            primary="$2.00/lb"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
@@ -215,7 +215,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="Dress Shirts: $3.50"
+                                            primary="Dress Shirts: $4.00"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
@@ -237,7 +237,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="Blouses: $7.50"
+                                            primary="Blouses: $8.00"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
@@ -248,7 +248,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="Sweaters: $7.50"
+                                            primary="Sweaters: $8.00"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
@@ -259,7 +259,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="Polos: $7.50"
+                                            primary="Polos: $8.00"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
@@ -287,7 +287,7 @@ const Services = () => {
                                             <CheckroomRoundedIcon />
                                         </ListItemIcon>
                                         <ListItemText
-                                            primary="Trousers: $7.50"
+                                            primary="Trousers: $8.00"
                                             primaryTypographyProps={{
                                                 fontSize: "20px",
                                             }}
